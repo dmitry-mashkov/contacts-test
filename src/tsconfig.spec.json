@@ -4,11 +4,12 @@
     "outDir": "../out-tsc/spec",
     "types": [
       "jasmine",
-      "node"
+      "node",
+      "jest"
     ]
   },
   "files": [
-    "test.ts",
+    "jestGlobalMocks.ts",
     "polyfills.ts"
   ],
   "include": [
