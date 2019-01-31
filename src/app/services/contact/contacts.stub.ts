@@ -16,16 +16,6 @@ export default [
     note: `Maxine's address`
   },
   {
-    firstName: 'Adam',
-    lastName: 'Acer',
-    phone: '399-692-7753',
-    email: 'adam.acer@gmail.com',
-    address: `99 Weiland Way
-    Cupertino CA 95014
-    United States`,
-    note: `Adam's California address`
-  },
-  {
     firstName: 'Scott',
     lastName: 'Anderson',
     phone: '399-692-7753',
@@ -34,6 +24,16 @@ export default [
     Cupertino CA 95014
     Canada`,
     note: `Scott's address`
+  },
+  {
+    firstName: 'Adam',
+    lastName: 'Acer',
+    phone: '399-692-7753',
+    email: 'adam.acer@gmail.com',
+    address: `99 Weiland Way
+    Cupertino CA 95014
+    United States`,
+    note: `Adam's California address`
   },
   {
     firstName: 'Mary',

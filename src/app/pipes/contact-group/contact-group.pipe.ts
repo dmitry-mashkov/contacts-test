@@ -22,19 +22,15 @@ export class ContactGroupPipe implements PipeTransform {
   transform(contacts: Contact[], args?: any): any {
     if (!contacts) return contacts;
 
-    const unsortedContactGroups = groupBy(flow([
+    const sortedContacts = sortBy('lastName')(contacts);
+    const contactGroups = groupBy(flow([
       get('lastName'),
       first
-    ]))(contacts);
+    ]))(sortedContacts);
 
-    const sortedContactGroups = flow([
-      toPairs,
-      sortBy(0),
-      fromPairs,
-      _map((contacts, abbreviation) => ({ abbreviation, contacts }))
-    ])(unsortedContactGroups);
+    const contactGroupsList = _map((contacts, abbreviation) => ({ abbreviation, contacts }))(contactGroups);
 
-    return sortedContactGroups;
+    return contactGroupsList;
   }
 
 }
