@@ -6,6 +6,16 @@ import {Contact} from '../../types/contact.type';
 
 export default [
   {
+    firstName: 'Maxine',
+    lastName: 'Cromwell',
+    phone: '399-692-7753',
+    email: 'maxine.cromwell@gmail.com',
+    address: `99 Weiland Way
+    Cupertino CA 95014
+    Gonduras`,
+    note: `Maxine's address`
+  },
+  {
     firstName: 'Adam',
     lastName: 'Acer',
     phone: '399-692-7753',
@@ -134,15 +144,5 @@ export default [
     Cupertino CA 95014
     Cuba`,
     note: `Harold's address`
-  },
-  {
-    firstName: 'Maxine',
-    lastName: 'Cromwell',
-    phone: '399-692-7753',
-    email: 'maxine.cromwell@gmail.com',
-    address: `99 Weiland Way
-    Cupertino CA 95014
-    Gonduras`,
-    note: `Maxine's address`
   }
 ] as Contact[];

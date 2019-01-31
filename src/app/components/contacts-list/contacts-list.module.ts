@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ContactsListComponent } from './contacts-list.component';
 import { ContactsListItemComponent } from './contact-group/contacts-list-item/contacts-list-item.component';
 import { ContactGroupComponent } from './contact-group/contact-group.component';
-import { ContactGroupPipe } from '../../pipes/contact-group/contact-group.pipe';
+import { PipesModule } from '../../pipes/pipes.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +13,7 @@ import { ContactGroupPipe } from '../../pipes/contact-group/contact-group.pipe';
   ],
   imports: [
     CommonModule,
-    // ContactGroupPipe
+    PipesModule
   ],
   exports: [
     ContactsListComponent
