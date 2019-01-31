@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import {Contact} from '../../types/contact.type';
+import { ContactInteractive } from './contact-interactive.type';
 
 @Component({
   selector: 'app-contacts-list',
@@ -14,4 +15,10 @@ export class ContactsListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onContactClick(contact: ContactInteractive) {
+    console.log('-- parent caught the event');
+    console.log(contact);
+
+    contact.isActive = true;
+  }
 }

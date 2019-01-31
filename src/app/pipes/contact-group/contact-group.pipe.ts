@@ -4,13 +4,12 @@ import {
   flow,
   get,
   first,
-  toPairs,
   sortBy,
-  fromPairs,
   map
 } from 'lodash/fp';
 
 import { Contact } from '../../types/contact.type';
+import { ContactGroup } from '../../types/contact-group.type';
 
 const _map = map.convert({cap: false});
 
@@ -19,8 +18,8 @@ const _map = map.convert({cap: false});
 })
 export class ContactGroupPipe implements PipeTransform {
 
-  transform(contacts: Contact[], args?: any): any {
-    if (!contacts) return contacts;
+  transform(contacts?: Contact[], args?: any): ContactGroup[] {
+    if (!contacts) return [];
 
     const sortedContacts = sortBy('lastName')(contacts);
     const contactGroups = groupBy(flow([

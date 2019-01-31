@@ -1,5 +1,7 @@
 <h1>{{ contactGroup?.abbreviation }}</h1>
 
-<app-contacts-list-item *ngFor="let contact of contactGroup?.contacts"
-  [contact]="contact">
+<app-contacts-list-item
+  *ngFor="let contact of contactGroup?.contacts"
+  [contact]="contact"
+  (click)="onContactClick(contact)">
 </app-contacts-list-item>

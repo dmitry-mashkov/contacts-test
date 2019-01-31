@@ -1,1 +1,4 @@
-<div>{{ name }}</div>
+<div [ngClass]="contact.isActive ? 'text-success' : ''">
+  <span>{{ name }}</span>
+  <span>R</span>
+</div>
