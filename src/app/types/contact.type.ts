@@ -9,4 +9,4 @@ export type Contact = {
   email: string;
   address: string;
   note: string;
-}
+};

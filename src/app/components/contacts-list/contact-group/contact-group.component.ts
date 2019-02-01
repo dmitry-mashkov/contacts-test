@@ -16,8 +16,6 @@ export class ContactGroupComponent implements OnInit {
   }
 
   onContactClick(contact) {
-    console.log('-- contact clicked');
-    console.log(contact);
     this.contactClick.emit(contact);
   }
 }

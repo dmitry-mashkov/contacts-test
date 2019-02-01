@@ -6,4 +6,4 @@ import { Contact } from '../../types/contact.type';
 
 export type ContactInteractive = Contact & {
   isActive: boolean;
-}
+};

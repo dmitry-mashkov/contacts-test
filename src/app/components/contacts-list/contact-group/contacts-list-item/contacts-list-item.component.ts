@@ -14,10 +14,12 @@ export class ContactsListItemComponent implements OnInit {
   }
 
   get name() {
-    if (!this.contact) return '';
+    if (!this.contact) {
+      return '';
+    }
 
     const {firstName, lastName} = this.contact;
-    return `${firstName} ${lastName}`
+    return `${firstName} ${lastName}`;
   }
 
   ngOnInit() {

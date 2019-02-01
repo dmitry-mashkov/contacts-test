@@ -18,10 +18,12 @@ const _map = map.convert({cap: false});
 })
 export class ContactGroupPipe implements PipeTransform {
 
-  transform(contacts?: Contact[], args?: any): ContactGroup[] {
-    if (!contacts) return [];
+  transform(contactList?: Contact[], args?: any): ContactGroup[] {
+    if (!contactList) {
+      return [];
+    }
 
-    const sortedContacts = sortBy('lastName')(contacts);
+    const sortedContacts = sortBy('lastName')(contactList);
     const contactGroups = groupBy(flow([
       get('lastName'),
       first

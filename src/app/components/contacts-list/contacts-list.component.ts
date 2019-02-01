@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Contact} from '../../types/contact.type';
+import { find } from 'lodash/fp';
+
 import { ContactInteractive } from './contact-interactive.type';
 
 @Component({
@@ -8,16 +9,19 @@ import { ContactInteractive } from './contact-interactive.type';
   styleUrls: ['./contacts-list.component.scss']
 })
 export class ContactsListComponent implements OnInit {
-  @Input() contacts: Contact[];
+  @Input() contacts: ContactInteractive[];
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit() {
   }
 
   onContactClick(contact: ContactInteractive) {
-    console.log('-- parent caught the event');
-    console.log(contact);
+    const activeContact: ContactInteractive = find('isActive')(this.contacts);
+    if (activeContact) {
+      activeContact.isActive = false;
+    }
 
     contact.isActive = true;
   }
