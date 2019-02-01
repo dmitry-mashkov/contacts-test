@@ -1,0 +1,17 @@
+////
+/// Contact item styling
+////
+
+@import '../../../../../assets/sass/variables';
+
+.contact-item {
+  cursor: pointer;
+  padding: 3px 40px;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.text-highlight {
+  color: $white-color;
+  background: $blue-color;
+}

@@ -46,7 +46,7 @@ export default [
     note: `Mary's address`
   },
   {
-    firstName: 'Stuart',
+    firstName: 'Stuart Stuart Stuart StuartStuartStuartStuartStuartStuartStuartuartStuartStuartStuart',
     lastName: 'Asmussen',
     phone: '399-692-7753',
     email: 'stuart.asmussen@gmail.com',

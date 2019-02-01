@@ -1,0 +1,11 @@
+////
+/// Contact group styling
+////
+
+@import '../../../../assets/sass/variables';
+
+.contact-group-abbr {
+  color: $gray-dark-color;
+  border-bottom: 2px solid $gray-darker-color;
+  margin-left: 25px;
+}

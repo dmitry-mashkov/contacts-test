@@ -3,10 +3,11 @@
 ////
 
 app-contacts-list {
-  flex: 3 1 auto;
+  flex: 0 1 auto;
+  max-width: 400px;
 }
 
 app-contact {
-  flex: 7 1 auto;
+  flex: 1 1 auto;
 }
 
