@@ -6,12 +6,28 @@
 
 .contact-item {
   cursor: pointer;
-  padding: 3px 40px;
+  padding: 3px 20px 3px 40px;
   font-size: 1.2rem;
   font-weight: 600;
+
+  &:hover {
+    color: lighten($black-color, 20%);
+  }
 }
 
-.text-highlight {
+.text-highlight,
+.text-highlight:hover {
   color: $white-color;
   background: $blue-color;
+}
+
+.contact-name {
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 90%;
+  text-overflow: ellipsis;
+}
+
+.delete-icon {
+
 }

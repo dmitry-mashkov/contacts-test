@@ -1,6 +1,6 @@
 <div
   [ngClass]="contact.isActive ? 'text-highlight' : ''"
-  class="contact-item">
-  <span>{{ name }}</span>
-  <span>R</span>
+  class="contact-item d-flex justify-content-between">
+  <span class="contact-name">{{ name }}</span>
+  <span class="delete-icon">R</span>
 </div>
