@@ -1,10 +1,10 @@
 <div
-  [ngClass]="contact.isActive ? 'contact-item-active' : ''"
+  [ngClass]="{ 'contact-item-active': contact.isActive }"
   class="contact-item d-flex justify-content-between">
   <span
-    [ngClass]="contact.isActive ? 'text-highlight' : ''"
+    [ngClass]="{ 'text-highlight': contact.isActive }"
     class="contact-name">
-    {{ name }}
+    {{ contact | contactName }}
   </span>
 
   <fa-layers

@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { ContactInteractive } from '../../contact-interactive.type';
@@ -8,24 +8,9 @@ import { ContactInteractive } from '../../contact-interactive.type';
   templateUrl: './contacts-list-item.component.html',
   styleUrls: ['./contacts-list-item.component.scss']
 })
-export class ContactsListItemComponent implements OnInit {
+export class ContactsListItemComponent {
   @Input() contact: ContactInteractive;
   @Input() isInEditMode: boolean;
   faMinusCircle = faMinusCircle;
-
-  constructor() {
-  }
-
-  get name() {
-    if (!this.contact) {
-      return '';
-    }
-
-    const {firstName, lastName} = this.contact;
-    return `${firstName} ${lastName}`;
-  }
-
-  ngOnInit() {
-  }
 
 }

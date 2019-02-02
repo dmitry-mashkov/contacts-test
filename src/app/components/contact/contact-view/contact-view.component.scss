@@ -1,0 +1,32 @@
+////
+/// Contact view styling
+////
+
+@import '../../../../assets/sass/variables';
+
+:host {
+  padding: 100px 50px 20px;
+  display: block;
+  height: 100%;
+}
+
+.contact-name {
+  font-size: 46px;
+}
+
+.row {
+  padding: 5px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid $gray-light-color;
+  }
+}
+
+.label {
+  color: $label-color;
+  text-align: right;
+}
+
+.contact-address {
+  white-space: pre-wrap;
+}

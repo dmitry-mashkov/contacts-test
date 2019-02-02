@@ -2,10 +2,22 @@
 /// General styles
 ////
 
+@import 'variables';
+
 html,
 body {
   height: 100%;
   overflow: hidden;
+}
+
+.btn-contact {
+  border: 1px solid $gray-darker-color;
+  color: $black-color;
+  font-size: 1.3rem;
+
+  &:hover {
+    border-color: darken($gray-darker-color, 10%);
+  }
 }
 
 .fill-remaining-space {

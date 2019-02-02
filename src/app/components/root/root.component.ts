@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { find } from 'lodash/fp';
 
-import {Contact} from '../../types/contact.type';
-import {ContactService} from '../../services/contact/contact.service';
+import { Contact } from '../../types/contact.type';
+import { ContactService } from '../../services/contact/contact.service';
 import { ContactInteractive } from '../contacts-list/contact-interactive.type';
 
 @Component({
@@ -12,8 +12,10 @@ import { ContactInteractive } from '../contacts-list/contact-interactive.type';
 })
 export class RootComponent implements OnInit {
   contacts: Contact[];
+  activeContact: ContactInteractive;
 
-  constructor(private contactService: ContactService) { }
+  constructor(private contactService: ContactService) {
+  }
 
   ngOnInit() {
     this.contacts = this.contactService.getContacts() as any;
@@ -26,5 +28,6 @@ export class RootComponent implements OnInit {
     }
 
     contact.isActive = true;
+    this.activeContact = contact;
   }
 }

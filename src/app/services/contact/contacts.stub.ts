@@ -11,8 +11,8 @@ export default [
     phone: '399-692-7753',
     email: 'maxine.cromwell@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Gonduras`,
+Cupertino CA 95014
+Gonduras`,
     note: `Maxine's address`
   },
   {
@@ -21,8 +21,8 @@ export default [
     phone: '399-692-7753',
     email: 'scott.anderson@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Canada`,
+Cupertino CA 95014
+Canada`,
     note: `Scott's address`
   },
   {
@@ -31,8 +31,8 @@ export default [
     phone: '399-692-7753',
     email: 'adam.acer@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    United States`,
+Cupertino CA 95014
+United States`,
     note: `Adam's California address`
   },
   {
@@ -41,8 +41,8 @@ export default [
     phone: '399-692-7753',
     email: 'mary.arthur@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Colombia`,
+Cupertino CA 95014
+Colombia`,
     note: `Mary's address`
   },
   {
@@ -51,8 +51,8 @@ export default [
     phone: '399-692-7753',
     email: 'stuart.asmussen@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Venesuela`,
+Cupertino CA 95014
+Venesuela`,
     note: `Stuart's address`
   },
   {
@@ -61,8 +61,8 @@ export default [
     phone: '399-692-7753',
     email: 'trevor.atwater@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Chili`,
+Cupertino CA 95014
+Chili`,
     note: `Trevor's address`
   },
   {
@@ -71,8 +71,8 @@ export default [
     phone: '399-692-7753',
     email: 'siobhan.auchulter@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Argentina`,
+Cupertino CA 95014
+Argentina`,
     note: `Siobhan's address`
   },
   {
@@ -81,8 +81,8 @@ export default [
     phone: '399-692-7753',
     email: 'mac.barter@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Brazil`,
+Cupertino CA 95014
+Brazil`,
     note: `Mac's address`
   },
   {
@@ -91,8 +91,8 @@ export default [
     phone: '399-692-7753',
     email: 'neal.becker@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Trinidad`,
+Cupertino CA 95014
+Trinidad`,
     note: `Neal's address`
   },
   {
@@ -101,8 +101,8 @@ export default [
     phone: '399-692-7753',
     email: 'jeremy.bee@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Mexico`,
+Cupertino CA 95014
+Mexico`,
     note: `Jeremy's address`
   },
   {
@@ -111,8 +111,8 @@ export default [
     phone: '399-692-7753',
     email: 'gregor.von.bingen@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Equador`,
+Cupertino CA 95014
+Equador`,
     note: `Gregor's address`
   },
   {
@@ -121,8 +121,8 @@ export default [
     phone: '399-692-7753',
     email: 'maxwell.broca@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Paraguay`,
+Cupertino CA 95014
+Paraguay`,
     note: `Maxwell's address`
   },
   {
@@ -131,8 +131,8 @@ export default [
     phone: '399-692-7753',
     email: 'reena.bushanda@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Bolivia`,
+Cupertino CA 95014
+Bolivia`,
     note: `Reena's address`
   },
   {
@@ -141,8 +141,8 @@ export default [
     phone: '399-692-7753',
     email: 'harold.curtis@gmail.com',
     address: `99 Weiland Way
-    Cupertino CA 95014
-    Cuba`,
+Cupertino CA 95014
+Cuba`,
     note: `Harold's address`
   }
 ] as Contact[];
