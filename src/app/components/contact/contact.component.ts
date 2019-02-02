@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ContactInteractive } from '../contacts-list/contact-interactive.type';
 
 @Component({
@@ -6,12 +6,9 @@ import { ContactInteractive } from '../contacts-list/contact-interactive.type';
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.scss']
 })
-export class ContactComponent implements OnInit {
+export class ContactComponent {
   @Input() contact: ContactInteractive;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+  @Input() isInEditMode: boolean;
+  @Output() editClick = new EventEmitter();
 
 }

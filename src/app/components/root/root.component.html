@@ -1,10 +1,13 @@
 <div class="root-container d-flex flex-row align-items-stretch h-100 w-100">
   <app-contacts-list
     [contacts]="contacts"
+    [isInEditMode]="isInEditMode"
     (contactSelect)="onContactItemSelect($event)">
   </app-contacts-list>
 
   <app-contact
-    [contact]="activeContact">
+    [contact]="activeContact"
+    [isInEditMode]="isInEditMode"
+    (editClick)="onEditClick($event)">
   </app-contact>
 </div>

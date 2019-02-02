@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ContactGroup } from '../../../types/contact-group.type';
 
 @Component({
@@ -6,16 +6,9 @@ import { ContactGroup } from '../../../types/contact-group.type';
   templateUrl: './contact-group.component.html',
   styleUrls: ['./contact-group.component.scss']
 })
-export class ContactGroupComponent implements OnInit {
+export class ContactGroupComponent {
   @Input() contactGroup: ContactGroup;
+  @Input() isInEditMode: boolean;
   @Output() contactClick = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
-  onContactClick(contact) {
-    this.contactClick.emit(contact);
-  }
 }

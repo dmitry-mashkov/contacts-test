@@ -2,6 +2,7 @@
   <app-contact-group
     *ngFor="let contactGroup of contacts | contactGroup"
     [contactGroup]="contactGroup"
-    (contactClick)="onContactClick($event)">
+    [isInEditMode]="isInEditMode"
+    (contactClick)="contactSelect.emit($event)">
   </app-contact-group>
 </div>

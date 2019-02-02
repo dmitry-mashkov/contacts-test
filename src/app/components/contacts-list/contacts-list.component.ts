@@ -9,6 +9,7 @@ import { ContactInteractive } from './contact-interactive.type';
 })
 export class ContactsListComponent implements OnInit {
   @Input() contacts: ContactInteractive[];
+  @Input() isInEditMode: boolean;
   @Output() contactSelect = new EventEmitter();
 
   constructor() {
@@ -20,7 +21,4 @@ export class ContactsListComponent implements OnInit {
     }
   }
 
-  onContactClick(contact: ContactInteractive) {
-    this.contactSelect.emit(contact);
-  }
 }

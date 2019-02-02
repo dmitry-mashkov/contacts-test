@@ -3,5 +3,6 @@
 <app-contacts-list-item
   *ngFor="let contact of contactGroup?.contacts"
   [contact]="contact"
-  (click)="onContactClick(contact)">
+  [isInEditMode]="isInEditMode"
+  (click)="contactClick.emit(contact)">
 </app-contacts-list-item>

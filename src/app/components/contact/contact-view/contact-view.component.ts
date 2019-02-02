@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 import { ContactInteractive } from '../../contacts-list/contact-interactive.type';
@@ -8,13 +8,9 @@ import { ContactInteractive } from '../../contacts-list/contact-interactive.type
   templateUrl: './contact-view.component.html',
   styleUrls: ['./contact-view.component.scss']
 })
-export class ContactViewComponent implements OnInit {
+export class ContactViewComponent {
   @Input() contact: ContactInteractive;
+  @Output() editClick = new EventEmitter();
   faPlus = faPlus;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

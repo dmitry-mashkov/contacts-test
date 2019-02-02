@@ -13,6 +13,7 @@ import { ContactInteractive } from '../contacts-list/contact-interactive.type';
 export class RootComponent implements OnInit {
   contacts: Contact[];
   activeContact: ContactInteractive;
+  isInEditMode: boolean;
 
   constructor(private contactService: ContactService) {
   }
@@ -29,5 +30,9 @@ export class RootComponent implements OnInit {
 
     contact.isActive = true;
     this.activeContact = contact;
+  }
+
+  onEditClick() {
+    this.isInEditMode = true;
   }
 }
