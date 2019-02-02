@@ -46,23 +46,13 @@ Colombia`,
     note: `Mary's address`
   },
   {
-    firstName: 'Stuart Stuart Stuart StuartStuartStuartStuartStuartStuartStuartuartStuartStuartStuart',
-    lastName: 'Asmussen',
-    phone: '399-692-7753',
-    email: 'stuart.asmussen@gmail.com',
-    address: `99 Weiland Way
-Cupertino CA 95014
-Venesuela`,
-    note: `Stuart's address`
-  },
-  {
     firstName: 'Trevor',
     lastName: 'Atwater',
     phone: '399-692-7753',
     email: 'trevor.atwater@gmail.com',
     address: `99 Weiland Way
 Cupertino CA 95014
-Chili`,
+Chile`,
     note: `Trevor's address`
   },
   {
@@ -84,6 +74,16 @@ Argentina`,
 Cupertino CA 95014
 Brazil`,
     note: `Mac's address`
+  },
+  {
+    firstName: 'Nicolaus',
+    lastName: 'Conrad-Copernicus',
+    phone: '399-692-7753',
+    email: 'nicolaus.conrad.copernicus@gmail.com',
+    address: `99 Weiland Way
+Cupertino CA 95014
+Puerto Rico`,
+    note: `Nicolaus' address`
   },
   {
     firstName: 'Neal',
@@ -112,7 +112,7 @@ Mexico`,
     email: 'gregor.von.bingen@gmail.com',
     address: `99 Weiland Way
 Cupertino CA 95014
-Equador`,
+Ecuador`,
     note: `Gregor's address`
   },
   {
@@ -144,5 +144,55 @@ Bolivia`,
 Cupertino CA 95014
 Cuba`,
     note: `Harold's address`
+  },
+  {
+    firstName: 'Chris',
+    lastName: 'Columbus',
+    phone: '399-692-7753',
+    email: 'chris.columbus@gmail.com',
+    address: `99 Weiland Way
+Cupertino CA 95014
+Nicaragua`,
+    note: `Chris' address`
+  },
+  {
+    firstName: 'Robbie',
+    lastName: 'Coltrane',
+    phone: '399-692-7753',
+    email: 'robbie.coltrane@gmail.com',
+    address: `99 Weiland Way
+Cupertino CA 95014
+Guatemala`,
+    note: `Robbie's address`
+  },
+  {
+    firstName: 'Eleanor',
+    lastName: 'Columbus',
+    phone: '399-692-7753',
+    email: 'eleanor.columbus@gmail.com',
+    address: `99 Weiland Way
+Cupertino CA 95014
+Peru`,
+    note: `Eleanor's address`
+  },
+  {
+    firstName: 'Melita',
+    lastName: 'Clarke',
+    phone: '399-692-7753',
+    email: 'melita.clarke@gmail.com',
+    address: `99 Weiland Way
+Cupertino CA 95014
+Suriname`,
+    note: `Melita's address`
+  },
+  {
+    firstName: 'Andrew',
+    lastName: 'Ackland-Snow',
+    phone: '399-692-7753',
+    email: 'andrew.ackland.snow@gmail.com',
+    address: `99 Weiland Way
+Cupertino CA 95014
+Uruguay`,
+    note: `Andrew's address`
   }
 ] as Contact[];

@@ -3,6 +3,7 @@
   class="contact-item d-flex justify-content-between">
   <span
     [ngClass]="{ 'text-highlight': contact.isActive }"
+    [title]="contact | contactName"
     class="contact-name">
     {{ contact | contactName }}
   </span>
