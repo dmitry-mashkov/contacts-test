@@ -4,21 +4,24 @@
 
 @import '../../../../../assets/sass/variables';
 
+:host {
+  display: block;
+}
+
 .contact-item {
-  cursor: pointer;
-  padding: 3px 20px 3px 40px;
+  cursor: default;
+  padding: 3px 10px 3px 40px;
   font-size: 1.3rem;
   font-weight: 600;
 
-  &:hover {
-    color: lighten($black-color, 20%);
+  &-active {
+    background: $blue-color;
   }
 }
 
 .text-highlight,
 .text-highlight:hover {
-  color: $white-color;
-  background: $blue-color;
+
 }
 
 .contact-name {
@@ -26,8 +29,27 @@
   overflow: hidden;
   max-width: 90%;
   text-overflow: ellipsis;
+
+  &:hover {
+    color: lighten($black-color, 20%);
+  }
+
+  .contact-item-active &,
+  .contact-item-active &:hover {
+    color: $white-color;
+  }
 }
 
-.delete-icon {
+fa-layers {
+  border-radius: 11px;
+  background: $white-color;
+  top: 5px;
+}
 
+fa-icon {
+  color: $red-color;
+
+  &:hover {
+    color: lighten($red-color, 5%);
+  }
 }

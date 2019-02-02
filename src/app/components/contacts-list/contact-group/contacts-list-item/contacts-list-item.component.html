@@ -1,10 +1,16 @@
 <div
-  [ngClass]="contact.isActive ? 'text-highlight' : ''"
+  [ngClass]="contact.isActive ? 'contact-item-active' : ''"
   class="contact-item d-flex justify-content-between">
-  <span class="contact-name">{{ name }}</span>
   <span
-    *ngIf="isInEditMode"
-    class="delete-icon">
-    R
+    [ngClass]="contact.isActive ? 'text-highlight' : ''"
+    class="contact-name">
+    {{ name }}
   </span>
+
+  <fa-layers
+    *ngIf="isInEditMode && contact.isActive">
+    <fa-icon
+      [icon]="faMinusCircle">
+    </fa-icon>
+  </fa-layers>
 </div>
