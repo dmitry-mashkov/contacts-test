@@ -2,5 +2,9 @@
   [ngClass]="contact.isActive ? 'text-highlight' : ''"
   class="contact-item d-flex justify-content-between">
   <span class="contact-name">{{ name }}</span>
-  <span class="delete-icon">R</span>
+  <span
+    *ngIf="isInEditMode"
+    class="delete-icon">
+    R
+  </span>
 </div>

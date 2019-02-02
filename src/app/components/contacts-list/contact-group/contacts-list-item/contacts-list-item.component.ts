@@ -8,6 +8,7 @@ import { ContactInteractive } from '../../contact-interactive.type';
 })
 export class ContactsListItemComponent implements OnInit {
   @Input() contact: ContactInteractive;
+  @Input() isInEditMode: boolean;
 
 
   constructor() {

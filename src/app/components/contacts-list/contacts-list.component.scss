@@ -9,6 +9,10 @@
   padding-top: 100px;
 }
 
+.contact-group-wrapper {
+  overflow-y: auto;
+}
+
 app-contact-group {
   margin-top: 10px;
   display: block;

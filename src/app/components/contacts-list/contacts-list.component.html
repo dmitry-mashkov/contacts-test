@@ -1,5 +1,7 @@
-<app-contact-group
-  *ngFor="let contactGroup of contacts | contactGroup"
-  [contactGroup]="contactGroup"
-  (contactClick)="onContactClick($event)">
-</app-contact-group>
+<div class="contact-group-wrapper h-100">
+  <app-contact-group
+    *ngFor="let contactGroup of contacts | contactGroup"
+    [contactGroup]="contactGroup"
+    (contactClick)="onContactClick($event)">
+  </app-contact-group>
+</div>
