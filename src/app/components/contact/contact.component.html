@@ -1,11 +1,13 @@
 <app-contact-view
-  *ngIf="!isInEditMode"
+  *ngIf="contact && !isInEditMode"
   [contact]="contact"
   (editClick)="editClick.emit()">
 </app-contact-view>
 
 <app-contact-edit
-  *ngIf="isInEditMode"
+  *ngIf="contact && isInEditMode"
   [contact]="contact"
   (update)="update.emit($event)">
 </app-contact-edit>
+
+<div *ngIf="!contact">No contacts selected</div>

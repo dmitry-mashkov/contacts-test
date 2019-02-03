@@ -39,6 +39,8 @@ export class RootComponent implements OnInit {
 
   onContactUpdate(contact: Contact) {
     this.contactService.updateContact(this.activeContact, contact);
+
+    this.contacts = [...this.contacts];
     this.isInEditMode = false;
   }
 }

@@ -18,9 +18,9 @@ const _map = map.convert({cap: false});
 })
 export class ContactGroupPipe implements PipeTransform {
 
-  transform(contactList?: Contact[], args?: any): ContactGroup[] {
+  transform(contactList?: Contact[], args?: any): ContactGroup[] | undefined {
     if (!contactList) {
-      return [];
+      return undefined;
     }
 
     const sortedContacts = sortBy('lastName')(contactList);
