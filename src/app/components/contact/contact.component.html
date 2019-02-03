@@ -9,6 +9,7 @@
   *ngIf="isEditFormVisible"
   [mode]="mode"
   [contact]="contact"
+  (addClick)="addClick.emit()"
   (update)="update.emit($event)"
   (create)="create.emit($event)">
 </app-contact-edit>

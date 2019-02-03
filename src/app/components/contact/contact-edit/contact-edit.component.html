@@ -83,13 +83,17 @@
   </div>
 
   <div class="contact-controls d-flex justify-content-between">
-    <button class="btn btn-contact">
+    <button
+      (click)="addClick.emit()"
+      type="button"
+      class="btn btn-contact">
       <fa-icon
         [icon]="faPlus">
       </fa-icon>
     </button>
 
     <button
+      type="submit"
       class="btn btn-contact">
       Done
     </button>

@@ -14,6 +14,7 @@ import { ModesEnum } from '../../../enums/modes.enum';
 export class ContactEditComponent implements OnInit {
   @Input() contact: Contact;
   @Input() mode: ModesEnum;
+  @Output() addClick = new EventEmitter();
   @Output() update = new EventEmitter();
   @Output() create = new EventEmitter();
 
