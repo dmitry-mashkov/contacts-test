@@ -1,5 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { ContactGroup } from '../../../types/contact-group.type';
+import { ContactInteractive } from '../contact-interactive.type';
 
 @Component({
   selector: 'app-contact-group',
@@ -9,6 +10,7 @@ import { ContactGroup } from '../../../types/contact-group.type';
 export class ContactGroupComponent {
   @Input() contactGroup: ContactGroup;
   @Input() isRemoveAllowed: boolean;
-  @Output() contactClick = new EventEmitter();
+  @Output() select = new EventEmitter<ContactInteractive>();
+  @Output() remove = new EventEmitter<ContactInteractive>();
 
 }

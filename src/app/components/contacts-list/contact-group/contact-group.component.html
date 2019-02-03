@@ -4,5 +4,6 @@
   *ngFor="let contact of contactGroup?.contacts"
   [contact]="contact"
   [isRemoveAllowed]="isRemoveAllowed"
-  (click)="contactClick.emit(contact)">
+  (select)="select.emit($event)"
+  (remove)="remove.emit($event)">
 </app-contacts-list-item>

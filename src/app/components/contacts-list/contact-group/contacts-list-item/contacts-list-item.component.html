@@ -4,12 +4,14 @@
   <span
     [ngClass]="{ 'text-highlight': contact.isActive }"
     [title]="contact | contactName"
+    (click)="select.emit(contact)"
     class="contact-name">
     {{ contact | contactName }}
   </span>
 
   <fa-layers
-    *ngIf="isRemoveAllowed && contact.isActive">
+    *ngIf="isRemoveAllowed && contact.isActive"
+    (click)="remove.emit(contact)">
     <fa-icon
       [icon]="faMinusCircle">
     </fa-icon>

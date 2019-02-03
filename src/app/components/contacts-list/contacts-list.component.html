@@ -3,6 +3,7 @@
     *ngFor="let contactGroup of contactGroups"
     [contactGroup]="contactGroup"
     [isRemoveAllowed]="isRemoveAllowed"
-    (contactClick)="contactSelect.emit($event)">
+    (select)="select.emit($event)"
+    (remove)="remove.emit($event)">
   </app-contact-group>
 </div>

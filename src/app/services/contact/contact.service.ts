@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { pull } from 'lodash/fp';
 
 import contacts from './contacts.stub';
 
@@ -20,5 +21,9 @@ export class ContactService {
 
   createContact(contact) {
     this.contacts.push(contact);
+  }
+
+  removeContact(contact) {
+    this.contacts = pull(contact)(this.contacts);
   }
 }

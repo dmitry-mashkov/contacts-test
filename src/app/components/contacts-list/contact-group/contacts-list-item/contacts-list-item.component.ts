@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { faMinusCircle } from '@fortawesome/free-solid-svg-icons';
 
 import { ContactInteractive } from '../../contact-interactive.type';
@@ -11,6 +11,8 @@ import { ContactInteractive } from '../../contact-interactive.type';
 export class ContactsListItemComponent {
   @Input() contact: ContactInteractive;
   @Input() isRemoveAllowed: boolean;
+  @Output() select = new EventEmitter<ContactInteractive>();
+  @Output() remove = new EventEmitter<ContactInteractive>();
   faMinusCircle = faMinusCircle;
 
 }

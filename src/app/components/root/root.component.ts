@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { find } from 'lodash/fp';
+import { find, flow, first, get } from 'lodash/fp';
 
 import { Contact } from '../../types/contact.type';
 import { ContactService } from '../../services/contact/contact.service';
 import { ContactInteractive } from '../contacts-list/contact-interactive.type';
 import { ModesEnum } from '../../enums/modes.enum';
+import { ContactGroupPipe } from '../../pipes/contact-group/contact-group.pipe';
 
 @Component({
   selector: 'app-root',
@@ -23,8 +24,21 @@ export class RootComponent implements OnInit {
     return this.mode === ModesEnum.Edit;
   }
 
+  get contactGroups() {
+    return new ContactGroupPipe().transform(this.contacts);
+  }
+
+  get firstContact() {
+    return flow([
+      first,
+      get('contacts'),
+      first
+    ])(this.contactGroups);
+  }
+
   ngOnInit() {
     this.contacts = this.contactService.getContacts();
+    this.makeContactActive(this.firstContact);
   }
 
   onContactItemSelect(contact: ContactInteractive) {
@@ -49,6 +63,12 @@ export class RootComponent implements OnInit {
     this.contactService.createContact(contact);
     this.refreshList();
     this.makeContactActive(contact as ContactInteractive);
+  }
+
+  onContactRemove(contact: ContactInteractive) {
+    this.contactService.removeContact(contact);
+    this.refreshList();
+    this.makeContactActive(this.firstContact);
   }
 
   private makeContactActive(contact: ContactInteractive) {
