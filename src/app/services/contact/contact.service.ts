@@ -12,4 +12,8 @@ export class ContactService {
   getContacts() {
     return contacts;
   }
+
+  updateContact(contact, data) {
+    Object.assign(contact, data);
+  }
 }

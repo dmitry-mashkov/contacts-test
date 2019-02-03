@@ -8,6 +8,7 @@
   <app-contact
     [contact]="activeContact"
     [isInEditMode]="isInEditMode"
-    (editClick)="onEditClick($event)">
+    (editClick)="onEditClick()"
+    (update)="onContactUpdate($event)">
   </app-contact>
 </div>

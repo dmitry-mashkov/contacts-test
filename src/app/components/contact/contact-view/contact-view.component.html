@@ -5,24 +5,24 @@
   <div class="contact-detail container-fluid">
 
     <div class="row">
-      <div class="col-3 col-xl-1 label">phone</div>
+      <div class="col-3 col-xl-1 field-label">phone</div>
       <div class="col-9 col-xl-11">{{ contact.phone }}</div>
     </div>
 
     <div class="row">
-      <div class="col-3 col-xl-1 label">email</div>
+      <div class="col-3 col-xl-1 field-label">email</div>
       <div class="col-9 col-xl-11">
         <a href="mailto:{{ contact.email }}">{{ contact.email }}</a>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-3 col-xl-1 label">address</div>
+      <div class="col-3 col-xl-1 field-label">address</div>
       <div class="col-9 col-xl-11 contact-address">{{ contact.address }}</div>
     </div>
 
     <div class="row">
-      <div class="col-3 col-xl-1 label">note</div>
+      <div class="col-3 col-xl-1 field-label">note</div>
       <div class="col-9 col-xl-11">{{ contact.note }}</div>
     </div>
 
@@ -37,7 +37,7 @@
 
     <button
       class="btn btn-contact"
-      (click)="editClick.emit($event)">
+      (click)="editClick.emit()">
       Edit
     </button>
   </div>

@@ -1,4 +1,11 @@
 <app-contact-view
+  *ngIf="!isInEditMode"
   [contact]="contact"
-  (editClick)="editClick.emit($event)">
+  (editClick)="editClick.emit()">
 </app-contact-view>
+
+<app-contact-edit
+  *ngIf="isInEditMode"
+  [contact]="contact"
+  (update)="update.emit($event)">
+</app-contact-edit>

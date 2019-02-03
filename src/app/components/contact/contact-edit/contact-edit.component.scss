@@ -1,0 +1,14 @@
+////
+/// Contact edit form styling
+////
+
+@import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
+
+:host {
+  @include content-container;
+}
+
+.contact-address {
+  white-space: pre-wrap;
+}

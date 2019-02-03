@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { ContactEditComponent } from './contact-edit/contact-edit.component';
@@ -15,6 +16,7 @@ import { PipesModule } from '../../pipes/pipes.module';
   ],
   imports: [
     CommonModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     PipesModule
   ],

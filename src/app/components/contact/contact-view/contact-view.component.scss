@@ -3,28 +3,10 @@
 ////
 
 @import '../../../../assets/sass/variables';
+@import '../../../../assets/sass/mixins';
 
 :host {
-  padding: 100px 70px 20px;
-  display: block;
-  height: 100%;
-}
-
-.contact-name {
-  font-size: 46px;
-}
-
-.row {
-  padding: 6px;
-
-  &:not(:last-child) {
-    border-bottom: 1px solid $gray-light-color;
-  }
-}
-
-.label {
-  color: $label-color;
-  text-align: right;
+  @include content-container;
 }
 
 .contact-address {

@@ -10,5 +10,6 @@ export class ContactComponent {
   @Input() contact: ContactInteractive;
   @Input() isInEditMode: boolean;
   @Output() editClick = new EventEmitter();
+  @Output() update = new EventEmitter();
 
 }
