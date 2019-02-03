@@ -11,7 +11,7 @@ import { ContactGroupPipe } from '../../pipes/contact-group/contact-group.pipe';
 })
 export class ContactsListComponent implements OnInit {
   @Input() contacts: ContactInteractive[];
-  @Input() isInEditMode: boolean;
+  @Input() isRemoveAllowed: boolean;
   @Output() contactSelect = new EventEmitter();
 
   constructor() {
@@ -24,6 +24,7 @@ export class ContactsListComponent implements OnInit {
   ngOnInit() {
     const contactGroups = this.contactGroups;
 
+    // try to select the first item in the grouped list
     if (this.contactGroups) {
       this.contactSelect.emit(flow([
         first,

@@ -8,7 +8,7 @@ import { ContactGroup } from '../../../types/contact-group.type';
 })
 export class ContactGroupComponent {
   @Input() contactGroup: ContactGroup;
-  @Input() isInEditMode: boolean;
+  @Input() isRemoveAllowed: boolean;
   @Output() contactClick = new EventEmitter();
 
 }

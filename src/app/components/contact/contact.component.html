@@ -1,13 +1,16 @@
 <app-contact-view
-  *ngIf="contact && !isInEditMode"
+  *ngIf="isViewVisible"
   [contact]="contact"
-  (editClick)="editClick.emit()">
+  (editClick)="editClick.emit()"
+  (addClick)="addClick.emit()">
 </app-contact-view>
 
 <app-contact-edit
-  *ngIf="contact && isInEditMode"
+  *ngIf="isEditFormVisible"
+  [mode]="mode"
   [contact]="contact"
-  (update)="update.emit($event)">
+  (update)="update.emit($event)"
+  (create)="create.emit($event)">
 </app-contact-edit>
 
 <div *ngIf="!contact">No contacts selected</div>

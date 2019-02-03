@@ -29,7 +29,9 @@
   </div>
 
   <div class="contact-controls d-flex justify-content-between">
-    <button class="btn btn-contact">
+    <button
+      class="btn btn-contact"
+      (click)="addClick.emit()">
       <fa-icon
         [icon]="faPlus">
       </fa-icon>

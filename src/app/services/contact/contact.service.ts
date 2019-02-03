@@ -6,14 +6,19 @@ import contacts from './contacts.stub';
   providedIn: 'root'
 })
 export class ContactService {
+  contacts = contacts;
 
   constructor() { }
 
   getContacts() {
-    return contacts;
+    return [...this.contacts];
   }
 
   updateContact(contact, data) {
     Object.assign(contact, data);
+  }
+
+  createContact(contact) {
+    this.contacts.push(contact);
   }
 }

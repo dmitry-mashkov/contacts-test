@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { pick } from 'lodash/fp';
 
 import { Contact } from '../../../types/contact.type';
+import { ModesEnum } from '../../../enums/modes.enum';
 
 @Component({
   selector: 'app-contact-edit',
@@ -12,7 +13,9 @@ import { Contact } from '../../../types/contact.type';
 })
 export class ContactEditComponent implements OnInit {
   @Input() contact: Contact;
+  @Input() mode: ModesEnum;
   @Output() update = new EventEmitter();
+  @Output() create = new EventEmitter();
 
   faPlus = faPlus;
 
@@ -21,16 +24,22 @@ export class ContactEditComponent implements OnInit {
     this.fieldNames.reduce((result, field) => ({ ...result, ...{ [field]: new FormControl('') }}), {})
   );
 
-  constructor() { }
-
   ngOnInit() {
-    // this.model = (this.mode === FormModes.Add) ? new Supplier() : _.cloneDeep(this.supplier);
-    this.profileForm.setValue(
-      pick(this.fieldNames)(this.contact)
-    );
+    if (this.mode === ModesEnum.Edit) {
+      this.profileForm.setValue(
+        pick(this.fieldNames)(this.contact)
+      );
+    }
   }
 
   onSubmit() {
-    this.update.emit(pick(this.fieldNames)(this.profileForm.value));
+    const data = pick(this.fieldNames)(this.profileForm.value);
+
+    if (this.mode === ModesEnum.Edit) {
+      this.update.emit(data);
+
+    } else {
+      this.create.emit(data);
+    }
   }
 }

@@ -11,6 +11,7 @@ import { ContactInteractive } from '../../contacts-list/contact-interactive.type
 export class ContactViewComponent {
   @Input() contact: ContactInteractive;
   @Output() editClick = new EventEmitter();
+  @Output() addClick = new EventEmitter();
   faPlus = faPlus;
 
 }
