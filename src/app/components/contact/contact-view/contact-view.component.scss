@@ -9,6 +9,10 @@
   @include content-container;
 }
 
+.contact-name {
+  font-size: $font-size-lg;
+}
+
 .contact-address {
   white-space: pre-wrap;
 }

@@ -9,11 +9,8 @@
   display: block;
   height: 100%;
 
-  .contact-name {
-    font-size: 46px;
-  }
-
-  .row {
+  .row,
+  .form-row {
     padding: 6px;
 
     &:not(:last-child) {
@@ -22,7 +19,7 @@
   }
 
   .field-label {
-    color: $label-color;
+    color: $text-muted;
     text-align: right;
   }
 }

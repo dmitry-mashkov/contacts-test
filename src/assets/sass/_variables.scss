@@ -12,18 +12,31 @@ $red-color: #ff3930;
 $gray-light-color: #e0e1e3;
 $gray-darker-color: #c3c3c3;
 $gray-dark-color: #6e6f71;
-
-$label-color: #808080;
+$text-muted: #808080;
 
 //FONTS
 //------
 $font-size-base: 1.2rem;
+$font-size-lg: 2.9rem;
+$line-height-lg: 1;
 
 //LINKS
 //-----
 $link-color: $blue-color;
 $link-decoration: underline;
 
+//BUTTONS
+//------
 $btn-padding-x: 30px;
 $btn-padding-y: 3px;
 $btn-border-radius: 10px;
+$btn-focus-box-shadow: none;
+
+//FORMS
+//------
+$input-focus-box-shadow: none;
+$input-btn-padding-y: 0;
+$input-btn-padding-x: 0.3rem;
+$input-btn-padding-y-lg: 0.3rem;
+$input-btn-padding-x-lg: 0.3rem;
+$input-border-width: 2px;

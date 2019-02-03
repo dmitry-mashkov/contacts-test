@@ -9,6 +9,21 @@
   @include content-container;
 }
 
-.contact-address {
-  white-space: pre-wrap;
+label {
+  color: $text-muted;
+}
+
+textarea {
+  resize: none;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  line-height: 1.2;
+}
+
+#address {
+  height: 85px;
+}
+
+#note {
+  height: 120px;
 }
