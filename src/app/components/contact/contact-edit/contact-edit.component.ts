@@ -40,7 +40,10 @@ export class ContactEditComponent implements OnInit {
       this.update.emit(data);
 
     } else {
-      this.create.emit(data);
+      // simple prevention of empty primary contact info
+      if (this.profileForm.value.firstName && this.profileForm.value.lastName) {
+        this.create.emit(data);
+      }
     }
   }
 }
