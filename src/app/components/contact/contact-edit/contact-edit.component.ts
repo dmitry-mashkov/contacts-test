@@ -36,14 +36,16 @@ export class ContactEditComponent implements OnInit {
   onSubmit() {
     const data = pick(this.fieldNames)(this.profileForm.value);
 
+    // simple prevention of submitting empty primary contact info
+    if (!data.firstName || !data.lastName) {
+      return;
+    }
+
     if (this.mode === ModesEnum.Edit) {
       this.update.emit(data);
 
     } else {
-      // simple prevention of empty primary contact info
-      if (this.profileForm.value.firstName && this.profileForm.value.lastName) {
-        this.create.emit(data);
-      }
+      this.create.emit(data);
     }
   }
 }
